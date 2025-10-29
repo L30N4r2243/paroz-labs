@@ -41,7 +41,7 @@ export default function Chatbot() {
     setMessages((prev) => [...prev, { sender: "user", text: message }])
 
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/chat`, {
+      const res = await fetch(`http://35.209.169.217:5000/api/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
